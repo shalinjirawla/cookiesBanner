@@ -25,7 +25,6 @@ export class BannerComponent implements OnInit {
         this.contents = res;
         this.contents.accordian.forEach((element,index) => {
           if(element.IsMandatory){
-            debugger
             this.indexId = index;
             if(this.indexId==index)
             {
