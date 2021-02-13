@@ -30,7 +30,7 @@
                 <div class="col-sm-12">
                     <div class="row">
                         <div class="col-sm-4 ">
-                            <button class="btn btn-success ml-2 font-weight-bold"><b>Accept All</b></button>
+                            <button class="btn btn-success  font-weight-bold"><b>Accept All</b></button>
                         </div>
                         <div class="col-sm-4">
                             <button class="btn btn-default font-weight-bold savebtnborder">Save Settings</button>
@@ -51,16 +51,16 @@
                         <ngb-panel *ngFor="let content of contents.accordian; let i = index" id="static-{{i}}">
                             <ng-template ngbPanelTitle>
                                 <div class="row bannerRow">
-                                    <div class="col-md-1 float-right">
-                                        <label class="switch float-right p-1" >
+                                    <div class="col-sm-1 float-right">
+                                        <label class="switch float-right mt-1" >
                                             <input type="checkbox" [checked]="content.IsMandatory">
                                             <span class="slider round"></span>
                                         </label>
                                     </div>
-                                    <div class="col-md-9 colBannerName float-left">
+                                    <div class="col-sm-9 colBannerName float-left">
                                         <label class="font-weight-bold  categoyheading">{{content.CategoyHeading}}</label>
                                     </div>
-                                    <div class="col-md-2 float-right">
+                                    <div class="col-sm-2 ">
                                     <span activeIds= "static-{{iconExpand}}" >
                                         <i class="bi bi-caret-down-fill  bannericon" *ngIf="!categoryAccordion?.activeIds.includes('static-'+i)" ></i>
 
@@ -74,27 +74,27 @@
                                 <hr>
                                 <p>{{content.CategoyText}}</p>
                                 <div class="row mb-2">
-                                    <div class="col-sm-4 font-weight-bold">
+                                    <div class="col-md-4 font-weight-bold">
                                         Plugins
                                     </div>
-                                    <div class="col-sm-4 font-weight-bold">
+                                    <div class="col-md-4 font-weight-bold">
                                         Block/Enable
                                     </div>
-                                    <div class="col-sm-4">
+                                    <div class="col-md-4">
                                     </div>
                                 </div>
                                 <div *ngFor="let conten of content.PluginList">
                                     <div class="row">
-                                        <div class="col-sm-4">
+                                        <div class="col-md-4">
                                             <p>{{conten.ComplianceType}}</p>
                                         </div>
-                                        <div class="col-sm-4">
+                                        <div class="col-md-4">
                                                 <label class="switch" id="expandBannerSwitch">
                                                     <input type="checkbox"[checked]="content.BlockingEnabled">
                                                     <span class="slider round"></span>
                                                 </label>
                                         </div>
-                                        <div class="col-sm-4">
+                                        <div class="col-md-4">
                                             <a href="{{conten.optOutExternalLink}}" *ngIf="conten.optOutExternalLink" target="_blank"><u>Go to site </u></a>
                                         </div>
                                     </div>
