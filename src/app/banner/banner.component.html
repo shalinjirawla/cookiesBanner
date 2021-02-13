@@ -1,0 +1,110 @@
+<div class="example-preview">
+    <br>
+    <span *ngIf="closeResult">
+    </span>
+    <div>
+        <ng-template #content let-c="close" let-d="dismiss">
+            <div id="cookies">
+                <br>
+                <button type="button" class="close" aria-label="Close" (click)="c('Close click')">
+                    <span aria-hidden="true" class="float-right mr-3">&times;</span>
+                </button>
+                <h2 class="ml-4"><b>Can we store cookies?</b></h2>
+                <br>
+                <p class="ml-4 mr-4">We and our partners use technologies, such as coookies, and process personal
+                    data, such
+                    as IP
+                    addresses and cookie identifiers, to personalize ads and content based on your interests, measure the
+                    performance of ads and content, and derive insights about the audiences who saw ads and content.
+                    <br>
+                    <br>
+                    Click below to consent to the use of this technology and the processing of your personal data for
+                    these
+                    purposes. You can change your mind and change your consent choices at any time by returning to this
+                    site.
+                    <br>
+                    <br>
+                    You can familiarize with our <label><u class="font-weight-bold">Privacy Policy</u></label>
+                </p>
+                <br>
+                <div class="col-sm-12">
+                    <div class="row">
+                        <div class="col-sm-4 ">
+                            <button class="btn btn-success ml-2 font-weight-bold"><b>Accept All</b></button>
+                        </div>
+                        <div class="col-sm-4">
+                            <button class="btn btn-default font-weight-bold savebtnborder">Save Settings</button>
+                        </div>
+                        <div class="col-sm-4">
+                            <button class="btn btn-default font-weight-bold"  (click)="toggles()">Customize <span class="float-right"><i class="bi bi-caret-down-fill" *ngIf="buttonName=='false'"></i> <i class="bi bi-caret-up-fill" *ngIf="buttonName=='true'"></i></span></button>
+                        </div>
+                    </div>
+                </div>
+                <br>
+            </div>
+            <div id="panels" *ngIf="showdiv">
+                <div class="container" *ngIf="contents!=null">
+                    <div class="" *ngFor="let content of contents.accordian; let i = index">
+                    </div>
+                    <ngb-accordion #categoryAccordion [closeOthers]="false" activeIds="static-{{indexId}}">
+
+                        <ngb-panel *ngFor="let content of contents.accordian; let i = index" id="static-{{i}}">
+                            <ng-template ngbPanelTitle>
+                                <div class="row bannerRow">
+                                    <div class="col-md-1 float-right">
+                                        <label class="switch float-right p-1" >
+                                            <input type="checkbox" [checked]="content.IsMandatory">
+                                            <span class="slider round"></span>
+                                        </label>
+                                    </div>
+                                    <div class="col-md-9 colBannerName float-left">
+                                        <label class="font-weight-bold  categoyheading">{{content.CategoyHeading}}</label>
+                                    </div>
+                                    <div class="col-md-2 float-right">
+                                    <span activeIds= "static-{{iconExpand}}" >
+                                        <i class="bi bi-caret-down-fill  bannericon" *ngIf="!categoryAccordion?.activeIds.includes('static-'+i)" ></i>
+
+                                        <i class="bi bi-caret-up-fill  bannericon" *ngIf="categoryAccordion?.activeIds.includes('static-'+i)"></i>
+                                </span>
+                                </div>
+                                </div>
+                            </ng-template>
+                            <br>
+                            <ng-template ngbPanelContent>
+                                <hr>
+                                <p>{{content.CategoyText}}</p>
+                                <div class="row mb-2">
+                                    <div class="col-sm-4 font-weight-bold">
+                                        Plugins
+                                    </div>
+                                    <div class="col-sm-4 font-weight-bold">
+                                        Block/Enable
+                                    </div>
+                                    <div class="col-sm-4">
+                                    </div>
+                                </div>
+                                <div *ngFor="let conten of content.PluginList">
+                                    <div class="row">
+                                        <div class="col-sm-4">
+                                            <p>{{conten.ComplianceType}}</p>
+                                        </div>
+                                        <div class="col-sm-4">
+                                                <label class="switch" id="expandBannerSwitch">
+                                                    <input type="checkbox"[checked]="content.BlockingEnabled">
+                                                    <span class="slider round"></span>
+                                                </label>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <a href="{{conten.optOutExternalLink}}" *ngIf="conten.optOutExternalLink" target="_blank"><u>Go to site </u></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </ng-template>
+                        </ngb-panel>
+                    </ngb-accordion>
+                </div>
+            </div>
+        </ng-template>
+    </div>
+    <button class="btn btn-primary container-fluid ml-5 openbanner" (click)="open(content)">Open Banner</button>
+</div>

@@ -1,0 +1,193 @@
+P {
+    color: gray;
+}
+
+.switch {
+    margin-top: 30%;
+    position: relative;
+    display: inline-block;
+    width: 30px;
+    height: 17px;
+    margin-left: -3rem;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 6px;
+    right: -8px;
+    bottom: 0;
+    background-color: rgb(200, 200, 199);
+    transition: .4s;
+
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 13px;
+    width: 13px;
+    left: 1px;
+    bottom: 2px;
+    background-color: rgb(253, 255, 253);
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked+.slider {
+    background-color: #92f1a2;
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 1px #02920e;
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(17.5px);
+}
+
+#expandBannerSwitch {
+    margin-left: 1px;
+}
+
+.slider.round {
+    border-radius: 34px;
+    background-color: #d6d6d6;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+    background-color: #069501;
+}
+::ng-deep .slider.round::after {
+    border-radius: 50%;
+    background-color: gray !important;
+}
+
+.bannerRow {
+    width: 100%;
+    margin-left: 0px;
+}
+
+.colBannerName {
+    text-align: start;
+    color: black;
+    font-weight: 700;
+}
+
+#panels {
+    background-color: #f0f0f0;
+}
+
+.bannericon {
+    float: right !important;
+}
+
+u {
+    color: black;
+}
+
+#p1 {
+    background-color: white;
+    border-radius: 0.5rem;
+}
+
+button {
+    width: 90%;
+}
+
+#cookies {
+    border-radius: 10rem;
+}
+
+.gotosite {
+    color: black;
+}
+
+label {
+    color: black;
+}
+
+i {
+    color: black;
+}
+
+.savebtnborder {
+    border: #e3dddd 1px solid;
+    color: gray;
+}
+
+.customize {
+    color: gray;
+}
+
+.close:hover {
+    color: red;
+}
+hr{
+    margin-top: -20px;
+}
+::ng-deep .accordion .card {
+    background-color: white;
+    border-radius: 0.5rem !important;
+}
+
+::ng-deep .accordion .card .card-header {
+    background-color: white;
+        padding: .75rem 1.25rem;
+        margin-bottom: 0;
+         border-bottom: 0px solid rgba(0,0,0,.125); 
+
+}
+::ng-deep .card{
+    height: 100% !important;
+
+}
+
+.openbanner {
+    width: 20%;
+}
+
+::ng-deep .accordion .card {
+    margin-top: 2%;
+    margin-bottom: 2%;
+    height: 10%;
+}
+::ng-deep.modal-dialog {
+    max-width: 35% !important
+}
+
+
+.btn-link:hover {
+    color: white!important;
+}
+
+::ng-deep .btn:focus {
+    box-shadow:none!important;
+}
+
+.categoyheading{
+    margin-left: -10px;
+}
+
+::ng-deep .btn-link {
+    width: 100%;
+}
+
+::ng-deep .custom-control-label {
+    float: left;
+}
+
+::ng-deep .bi-caret-down-fill {
+    float: right;
+}
+
