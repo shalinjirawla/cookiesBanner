@@ -1,0 +1,2 @@
+# cookiesBanner
+Secure Privacy
