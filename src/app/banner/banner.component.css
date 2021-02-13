@@ -67,6 +67,7 @@ input:checked+.slider:before {
     border-radius: 50%;
     background-color: #069501;
 }
+
 ::ng-deep .slider.round::after {
     border-radius: 50%;
     background-color: gray !important;
@@ -132,9 +133,11 @@ i {
 .close:hover {
     color: red;
 }
-hr{
+
+hr {
     margin-top: -20px;
 }
+
 ::ng-deep .accordion .card {
     background-color: white;
     border-radius: 0.5rem !important;
@@ -142,12 +145,13 @@ hr{
 
 ::ng-deep .accordion .card .card-header {
     background-color: white;
-        padding: .75rem 1.25rem;
-        margin-bottom: 0;
-         border-bottom: 0px solid rgba(0,0,0,.125); 
+    padding: .75rem 1.25rem;
+    margin-bottom: 0;
+    border-bottom: 0px solid rgba(0, 0, 0, .125);
 
 }
-::ng-deep .card{
+
+::ng-deep .card {
     height: 100% !important;
 
 }
@@ -161,21 +165,17 @@ hr{
     margin-bottom: 2%;
     height: 10%;
 }
-/* ::ng-deep.modal-dialog {
-    max-width: 35% !important
-} */
-
 
 .btn-link:hover {
-    color: white!important;
+    color: white !important;
 }
 
 ::ng-deep .btn:focus {
-    box-shadow:none!important;
+    box-shadow: none !important;
 }
 
-.categoyheading{
-    margin-left: -10px;
+.categoyheading {
+text-align: start;
 }
 
 ::ng-deep .btn-link {
@@ -189,27 +189,15 @@ hr{
 ::ng-deep .bi-caret-down-fill {
     float: right;
 }
-@media only screen and (min-width:320px) and (max-width:560px)
-{
-    .col-sm-4{
-        width:100%
-    }
-    .col-md-4{
-        width:33.33%
-    }
-    .col-sm-1{
-width: 10%;
-    }
-    .col-sm-9{
-width: 50%;
-    }
-    .col-sm-2{
-width: 40%;
-    }
 
-    button{
+@media only screen and (min-width:320px) and (max-width:560px) {
+       button {
         width: 100%;
         text-align: center;
         margin-top: 2%;
+    }
+    .Text{
+        font-size: 75%;
+        
     }
 }
